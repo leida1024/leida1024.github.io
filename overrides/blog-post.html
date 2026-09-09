@@ -1,0 +1,122 @@
+{% extends "main.html" %}
+{% import "partials/nav-item.html" as item with context %}
+
+{% block container %}
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary" aria-label="文章导航">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="{{ page.parent.url | url }}" class="md-nav__link">
+                  {% include ".icons/material/arrow-left.svg" %}
+                  <span class="md-ellipsis">全部文章</span>
+                </a>
+              </div>
+            </div>
+
+            {% for category in page.categories %}
+              <ul class="md-post__category md-nav__list">
+                <li class="md-nav__item md-nav__item--section">
+                  <div class="md-post__title md-post__category-title">
+                    <a href="{{ category.url | url }}" class="md-nav__link">
+                      <span class="md-ellipsis">{{ category.title }}</span>
+                      <span class="nav-count" aria-label="{{ category.posts | length }} 篇文章">
+                        {{- category.posts | length -}}
+                      </span>
+                    </a>
+                  </div>
+                  <nav class="md-nav" aria-label="{{ category.title }} 分类文章">
+                    <ul class="md-nav__list">
+                      {% for post in category.posts %}
+                        {% set active = " md-nav__link--active" if post == page else "" %}
+                        <li class="md-nav__item">
+                          <a href="{{ post.url | url }}" class="md-nav__link{{ active }}"
+                            {% if post == page %}aria-current="page"{% endif %}>
+                            <span class="md-ellipsis">{{ post.title }}</span>
+                          </a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </nav>
+                </li>
+              </ul>
+            {% endfor %}
+
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">文章信息</span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        {% include ".icons/material/calendar.svg" %}
+                        <time datetime="{{ page.config.date.created }}" class="md-ellipsis">
+                          {{- page.config.date.created | date -}}
+                        </time>
+                      </div>
+                    </li>
+                    {% if page.config.date.updated %}
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          {% include ".icons/material/calendar-clock.svg" %}
+                          <time datetime="{{ page.config.date.updated }}" class="md-ellipsis">
+                            {{- page.config.date.updated | date -}}
+                          </time>
+                        </div>
+                      </li>
+                    {% endif %}
+                    {% if page.config.readtime %}
+                      {% set time = page.config.readtime %}
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          {% include ".icons/material/clock-outline.svg" %}
+                          <span class="md-ellipsis">
+                            {% if time == 1 %}
+                              {{ lang.t("readtime.one") }}
+                            {% else %}
+                              {{ lang.t("readtime.other") | replace("#", time) }}
+                            {% endif %}
+                          </span>
+                        </div>
+                      </li>
+                    {% endif %}
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+
+            {% if page.config.links %}
+              <ul class="md-post__meta md-nav__list">
+                <li class="md-nav__item md-nav__item--section">
+                  <div class="md-post__title">
+                    <span class="md-ellipsis">{{ lang.t("blog.references") }}</span>
+                  </div>
+                  <nav class="md-nav">
+                    <ul class="md-nav__list">
+                      {% for nav_item in page.config.links %}
+                        {% set path = "__ref_" ~ loop.index %}
+                        {{ item.render(nav_item, path, 1) }}
+                      {% endfor %}
+                    </ul>
+                  </nav>
+                </li>
+              </ul>
+            {% endif %}
+          </nav>
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      {% if "navigation.path" in features %}
+        {% include "partials/path.html" %}
+      {% endif %}
+      {% block content %}
+        {% include "partials/content.html" %}
+      {% endblock %}
+    </article>
+  </div>
+{% endblock %}

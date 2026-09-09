@@ -3,6 +3,7 @@
   data-post-created="{{ post.config.date.created }}"
   data-post-updated="{{ post.config.date.updated or post.config.date.created }}"
   data-post-title="{{ post.title }}"
+  data-post-categories="{% for category in post.categories %}{{ category.title | e }}{% if loop.revindex > 1 %}|{% endif %}{% endfor %}"
 >
   <header class="md-post__header">
     <div class="md-post__meta md-meta">

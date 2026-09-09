@@ -16,9 +16,15 @@ theme:
     repo: fontawesome/brands/github
   features:
     - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.expand
+    - navigation.path
+    - navigation.footer
     - navigation.indexes
     - navigation.top
     - navigation.tracking
+    - search.suggest
+    - search.highlight
     - content.code.copy
     - content.action.edit
     - toc.follow
@@ -40,11 +46,9 @@ theme:
 
 nav:
   - 文章: index.md
-  - 历史页面:
+  - 迁移与历史:
       - archive/index.md
       - myIssues 迁移索引: archive/myissues-migration/index.md
-      - Hello World: 2023/05/03/hello-world/index.md
-      - How to Do Great Work: 2023/07/21/how-to-do-great-work/index.md
 
 plugins:
   - blog:
