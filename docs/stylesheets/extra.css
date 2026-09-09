@@ -156,6 +156,12 @@
   border-radius: 4px;
 }
 
+.giscus-comments {
+  margin-top: 2.4rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
 .md-footer-meta {
   background: #102d29;
 }
