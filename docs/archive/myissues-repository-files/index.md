@@ -11,7 +11,7 @@
 
 | 源文件 | 内容形态 | 博客文章 | 处理方式 |
 | --- | --- | --- | --- |
-| `docs/计算机最传统的课程在学什么.md` | 课程导览 | [计算机专业的传统核心课程在学什么](../../articles/computer-science/traditional-cs-course-map/traditional-cs-course-map.md) | 保留课程地图和个人判断，修正 HDL、编译器等过度简化的表述 |
+| `docs/计算机最传统的课程在学什么.md` | 原文迁移 | [计算机最传统的课程在学什么](../../articles/computer-science/traditional-cs-course-map/计算机最传统的课程在学什么.md) | 保留原文件名与原文，不改写内容 |
 | `05-daiding/makefile 变量问题.md` | 原理教程 | [Makefile 配方之间为什么留不住变量](../../articles/build-tools/make-recipe-state-and-variables/make-recipe-state-and-variables.md) | 删除原通用问答，重写 make、shell 与递归 make 的边界 |
 | `10-ubuntu-usages/tar.md` | 命令速查 | [tar、zip、gzip 与 7z 归档压缩速查](../../articles/linux/archive-compression-commands/archive-compression-commands.md) | 修正 ZIP、7z 和单文件压缩工具的错误命令 |
 | `10-ubuntu-usages/scp.md` | 操作教程 | [用 scp 在本机与远程主机之间传文件](../../articles/linux/scp-file-transfer/scp-file-transfer.md) | 增加端口、密钥、host key 与新旧协议边界 |
