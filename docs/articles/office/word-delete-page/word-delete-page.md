@@ -2,13 +2,14 @@
 title: Word 删除整页与空白页
 description: 用“定位”选择当前页，并根据分页符、分节符或末尾段落处理空白页
 date:
-  created: 2026-02-26T16:01:13+08:00
-  updated: 2026-02-26T16:01:13+08:00
+  created: 2025-11-03T10:52:28+08:00
+  updated: 2025-11-03T10:52:43+08:00
 categories:
   - Office
 slug: word-delete-page
-original_created_at: 2026-02-26T16:01:13+08:00
-original_updated_at: 2026-02-26T16:01:13+08:00
+original_created_at: 2025-11-03T10:52:28+08:00
+original_updated_at: 2025-11-03T10:52:43+08:00
+source_committed_at: 2026-02-26T16:01:13+08:00
 migrated_at: 2026-09-10T00:20:43+08:00
 last_verified: null
 status: expanded-note
