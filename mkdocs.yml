@@ -1,0 +1,81 @@
+site_name: Notes
+site_description: 问题记录与文章
+site_url: https://leida1024.github.io/
+repo_url: https://github.com/leida1024/leida1024.github.io
+repo_name: leida1024/leida1024.github.io
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; 2023-2026 leida1024
+
+theme:
+  name: material
+  language: zh
+  font: false
+  icon:
+    logo: material/console-line
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - content.code.copy
+    - content.action.edit
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到浅色模式
+
+nav:
+  - 首页: index.md
+  - Linux:
+      - linux/index.md
+      - IBus 输入延迟临时恢复: linux/ibus-input-delay/index.md
+      - Ubuntu 22.04 中文输入与双拼: linux/ubuntu-chinese-input/index.md
+  - 历史页面:
+      - archive/index.md
+      - Hello World: 2023/05/03/hello-world/index.md
+      - How to Do Great Work: 2023/07/21/how-to-do-great-work/index.md
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/leida1024
+      name: leida1024 on GitHub
+
+strict: true
