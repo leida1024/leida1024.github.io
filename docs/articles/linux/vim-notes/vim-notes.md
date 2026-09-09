@@ -3,13 +3,14 @@ title: Vim 基础配置与搜索替换
 description: 从旧 Ubuntu 工作环境记录中整理的 Vim 配置、系统剪贴板与常用查找命令
 date:
   created: 2023-09-01T08:52:15+08:00
-  updated: 2024-01-03T19:17:23+08:00
+  updated: 2024-02-01T23:50:58+08:00
 categories:
   - Linux
 slug: vim-notes
 original_created_at: 2023-09-01T00:52:15Z
-original_updated_at: 2024-01-03T11:17:23Z
+original_updated_at: 2024-02-01T23:50:58+08:00
 migrated_at: 2026-09-09T20:54:56+08:00
+repository_files_migrated_at: 2026-09-10T00:20:43+08:00
 last_verified: 2024-01-03
 status: historical-notes
 sources:
@@ -19,6 +20,9 @@ sources:
   - type: discussion
     number: 26
     url: https://github.com/junxian-li-hpc/myIssues/discussions/26
+  - type: repository-file
+    path: ubuntu-essentials/10-ubuntu-usages/nerdtree.md
+    url: https://github.com/leida1024/myIssues/blob/main/ubuntu-essentials/10-ubuntu-usages/nerdtree.md
 contributors:
   - junxian-li-hpc
 ---
@@ -88,7 +92,30 @@ nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
 
 替换模式是 Vim 正则表达式。涉及大量文件时，先保存或使用版本控制查看 diff。
 
+## NERDTree 旧配置
+
+原仓库曾把完整 NERDTree 源码随配置一起保存，并复制到 Vim 8 的原生 package 路径：
+
+```text
+~/.vim/pack/vendor/start/nerdtree/
+```
+
+现在更适合从 NERDTree 上游仓库或明确的插件管理器安装，避免长期携带无法追踪版本的
+快照。旧配置把 `Ctrl+n` 映射为打开文件树；进入 NERDTree 后常用操作包括：
+
+- `Enter`：打开文件或展开目录；
+- `t`：在新标签页打开；
+- `i` / `s`：水平 / 垂直分屏打开；
+- `I`：显示或隐藏以点开头的文件；
+- `m`：打开文件系统操作菜单；
+- `?`：查看当前版本的内置帮助。
+
+不同版本和个人映射可能改变按键。以 `:help NERDTree` 为准，不应把旧快捷键列表当作
+稳定接口。
+
 ## 来源
 
 - [原始 Issue #6](https://github.com/junxian-li-hpc/myIssues/issues/6)
 - [原始 Discussion #26](https://github.com/junxian-li-hpc/myIssues/discussions/26)
+- [原始 NERDTree 笔记](https://github.com/leida1024/myIssues/blob/main/ubuntu-essentials/10-ubuntu-usages/nerdtree.md)
+- [preservim/nerdtree](https://github.com/preservim/nerdtree)

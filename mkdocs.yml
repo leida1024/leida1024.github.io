@@ -49,6 +49,7 @@ nav:
   - 迁移与历史:
       - archive/index.md
       - myIssues 迁移索引: archive/myissues-migration/index.md
+      - myIssues 仓库文件迁移: archive/myissues-repository-files/index.md
 
 plugins:
   - blog:

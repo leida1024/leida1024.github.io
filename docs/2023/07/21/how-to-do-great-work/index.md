@@ -12,4 +12,4 @@ hide:
 
 # 页面已移动
 
-[前往归类后的阅读记录](../../../../articles/reading/how-to-do-great-work/index.md)
+[前往归类后的阅读记录](../../../../articles/reading/how-to-do-great-work/how-to-do-great-work.md)

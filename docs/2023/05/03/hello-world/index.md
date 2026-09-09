@@ -12,4 +12,4 @@ hide:
 
 # 页面已移动
 
-[前往归类后的 Hello World](../../../../articles/site/hello-world/index.md)
+[前往归类后的 Hello World](../../../../articles/site/hello-world/hello-world.md)

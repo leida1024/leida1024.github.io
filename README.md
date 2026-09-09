@@ -13,11 +13,12 @@ python -m mkdocs serve
 
 ## 新建文章
 
-每篇文章使用独立目录，正文和图片放在一起：
+每篇文章使用独立目录，正文和图片放在一起；正文 Markdown 与文章目录同名，方便在
+编辑器标签中辨认：
 
 ```text
 docs/articles/<分类>/<文章名>/
-├── index.md
+├── <文章名>.md
 └── screenshot.png
 ```
 

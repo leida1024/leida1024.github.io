@@ -30,12 +30,12 @@ contributors:
 
 ## 已拆分的主题
 
-- [Ubuntu 软件源配置的版本边界](../ubuntu-software-sources/index.md)
-- [Ubuntu 22.04 中文输入与双拼设置](../ubuntu-chinese-input/index.md)
-- [Vim 基础配置与搜索替换](../vim-notes/index.md)
-- [tmux 基础配置与自动进入会话](../tmux-notes/index.md)
-- [Zsh 与 Oh My Zsh 安装边界](../zsh-notes/index.md)
-- [用 update-alternatives 切换 Java](../java-alternatives/index.md)
+- [Ubuntu 软件源配置的版本边界](../ubuntu-software-sources/ubuntu-software-sources.md)
+- [Ubuntu 22.04 中文输入与双拼设置](../ubuntu-chinese-input/ubuntu-chinese-input.md)
+- [Vim 基础配置与搜索替换](../vim-notes/vim-notes.md)
+- [tmux 基础配置与自动进入会话](../tmux-notes/tmux-notes.md)
+- [Zsh 与 Oh My Zsh 安装边界](../zsh-notes/zsh-notes.md)
+- [用 update-alternatives 切换 Java](../java-alternatives/java-alternatives.md)
 
 ## Bash 历史搜索
 
