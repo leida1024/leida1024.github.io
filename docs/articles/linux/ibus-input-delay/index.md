@@ -1,9 +1,15 @@
 ---
 title: Ubuntu 20.04/22.04 IBus 输入延迟的临时恢复
 description: 重启 IBus，临时恢复 Ubuntu 上间歇性卡顿的键盘输入
+date:
+  created: 2023-12-06T15:12:59+08:00
+  updated: 2024-01-19T11:56:10+08:00
+categories:
+  - Linux
+slug: ibus-input-delay
 original_created_at: 2023-12-06T07:12:59Z
 original_updated_at: 2024-01-19T03:56:10Z
-migrated_at: 2026-09-09
+migrated_at: 2026-09-09T18:26:09+08:00
 last_verified: 2024-01-19
 status: historical-tested
 sources:
@@ -14,13 +20,11 @@ contributors:
   - junxian-li-hpc
 ---
 
-# Ubuntu 20.04/22.04 IBus 输入延迟的临时恢复
-
-<p class="article-meta">首次记录：2023-12-06 · 最后验证：2024-01-19 · 迁移：2026-09-09</p>
-
 !!! warning "适用边界"
     这是在 Ubuntu 20.04 和 22.04 上实际恢复过输入的临时办法，不是卡顿根因的
     通用修复。当前未在更新版本的 Ubuntu 上复测。
+
+<!-- more -->
 
 ## 现象
 

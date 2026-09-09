@@ -8,6 +8,7 @@ copyright: Copyright &copy; 2023-2026 leida1024
 
 theme:
   name: material
+  custom_dir: overrides
   language: zh
   font: false
   icon:
@@ -38,17 +39,25 @@ theme:
         name: 切换到浅色模式
 
 nav:
-  - 首页: index.md
-  - Linux:
-      - linux/index.md
-      - IBus 输入延迟临时恢复: linux/ibus-input-delay/index.md
-      - Ubuntu 22.04 中文输入与双拼: linux/ubuntu-chinese-input/index.md
+  - 文章: index.md
   - 历史页面:
       - archive/index.md
       - Hello World: 2023/05/03/hello-world/index.md
       - How to Do Great Work: 2023/07/21/how-to-do-great-work/index.md
 
 plugins:
+  - blog:
+      blog_dir: .
+      post_dir: articles
+      post_url_format: "{categories}/{slug}"
+      post_date_format: "yyyy-MM-dd HH:mm:ss XXX"
+      post_excerpt: required
+      archive_name: 时间归档
+      archive_url_format: "timeline/{date}"
+      categories_name: 分类
+      categories_url_format: "category/{slug}"
+      authors: false
+      pagination: false
   - search:
       lang:
         - zh
@@ -71,6 +80,9 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/sort-posts.js
 
 extra:
   social:

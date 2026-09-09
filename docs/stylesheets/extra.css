@@ -3,6 +3,7 @@
   --md-primary-fg-color--light: #285f57;
   --md-primary-fg-color--dark: #102d29;
   --md-accent-fg-color: #b5412e;
+  --md-typeset-a-color: #1d6b61;
 }
 
 [data-md-color-scheme="slate"] {
@@ -10,6 +11,7 @@
   --md-primary-fg-color--light: #327267;
   --md-primary-fg-color--dark: #163833;
   --md-accent-fg-color: #ff9f68;
+  --md-typeset-a-color: #76b7a8;
   --md-default-bg-color: #151918;
   --md-default-fg-color: #ecf1ef;
 }
@@ -34,12 +36,61 @@
   letter-spacing: 0;
 }
 
-.md-typeset .article-meta {
-  margin-top: -0.8rem;
+.article-timebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  margin: -0.7rem 0 1.2rem;
   color: var(--md-default-fg-color--light);
   font-size: 0.72rem;
   line-height: 1.6;
   overflow-wrap: anywhere;
+}
+
+.article-timebar span {
+  white-space: nowrap;
+}
+
+.md-typeset .article-meta {
+  margin-top: -0.7rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.post-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.55rem;
+  margin: -2.4rem 0 1rem;
+}
+
+.post-toolbar label {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+}
+
+.post-toolbar select {
+  min-width: 8.5rem;
+  padding: 0.42rem 2rem 0.42rem 0.65rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 6px;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font: inherit;
+  cursor: pointer;
+}
+
+.post-toolbar select:focus-visible {
+  border-color: var(--md-accent-fg-color);
+  outline: 2px solid color-mix(in srgb, var(--md-accent-fg-color) 35%, transparent);
+  outline-offset: 2px;
+}
+
+.md-post__meta time {
+  font-variant-numeric: tabular-nums;
 }
 
 .md-typeset .grid.cards > ul > li {
@@ -74,7 +125,18 @@
     line-height: 1.25;
   }
 
-  .md-typeset .article-meta {
-    margin-top: -0.4rem;
+  .article-timebar {
+    display: grid;
+    gap: 0.15rem;
+    margin-top: -0.35rem;
+  }
+
+  .post-toolbar {
+    justify-content: space-between;
+    margin: 0 0 0.75rem;
+  }
+
+  .post-toolbar select {
+    min-width: 7.75rem;
   }
 }

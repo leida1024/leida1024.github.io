@@ -1,0 +1,55 @@
+<article
+  class="md-post md-post--excerpt"
+  data-post-created="{{ post.config.date.created }}"
+  data-post-updated="{{ post.config.date.updated or post.config.date.created }}"
+  data-post-title="{{ post.title }}"
+>
+  <header class="md-post__header">
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          创建
+          <time datetime="{{ post.config.date.created }}">
+            {{- post.config.date.created | date -}}
+          </time>
+        </li>
+        {% if post.config.date.updated %}
+          <li class="md-meta__item">
+            更新
+            <time datetime="{{ post.config.date.updated }}">
+              {{- post.config.date.updated | date -}}
+            </time>
+          </li>
+        {% endif %}
+        {% if post.categories %}
+          <li class="md-meta__item">
+            {% for category in post.categories %}
+              <a href="{{ category.url | url }}" class="md-meta__link">
+                {{- category.title -}}
+              </a>
+              {%- if loop.revindex > 1 %}, {% endif -%}
+            {% endfor -%}
+          </li>
+        {% endif %}
+        {% if post.config.readtime %}
+          {% set time = post.config.readtime %}
+          <li class="md-meta__item">
+            {% if time == 1 %}
+              {{ lang.t("readtime.one") }}
+            {% else %}
+              {{ lang.t("readtime.other") | replace("#", time) }}
+            {% endif %}
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    {{ post.content }}
+    {% if post.more %}
+      <nav class="md-post__action">
+        <a href="{{ post.url | url }}">{{ lang.t("blog.continue") }}</a>
+      </nav>
+    {% endif %}
+  </div>
+</article>

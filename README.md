@@ -16,10 +16,12 @@ python -m mkdocs serve
 每篇文章使用独立目录，正文和图片放在一起：
 
 ```text
-docs/<主题>/<文章名>/
+docs/articles/<分类>/<文章名>/
 ├── index.md
 └── screenshot.png
 ```
 
-新增文章后，在 `mkdocs.yml` 的 `nav` 中加入入口。本仓库只保存源码，生成的
-`site/` 目录不提交。
+文章需要在 frontmatter 中填写 `date.created`、`date.updated`、`categories` 和
+`slug`。模板会自动更新首页、排序、分类和时间归档，不需要手工修改导航。本仓库只
+保存源码，生成的 `site/` 目录不提交。页面时间使用带时区的 ISO 8601 值，当前文章
+统一显示北京时间 `+08:00` 并保留到秒。

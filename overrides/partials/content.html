@@ -1,0 +1,20 @@
+{% include "partials/tags.html" %}
+{% include "partials/actions.html" %}
+{% if "\u003ch1" not in page.content %}
+  <h1>{{ page.title | d(config.site_name, true) }}</h1>
+{% endif %}
+{% if page.config and page.config.date %}
+  <div class="article-timebar" aria-label="文章时间">
+    <span>创建 <time datetime="{{ page.config.date.created }}">{{ page.config.date.created | date }}</time></span>
+    {% if page.config.date.updated %}
+      <span>更新 <time datetime="{{ page.config.date.updated }}">{{ page.config.date.updated | date }}</time></span>
+    {% endif %}
+    {% if page.meta.migrated_at %}
+      <span>迁移 <time datetime="{{ page.meta.migrated_at }}">{{ page.meta.migrated_at | date }}</time></span>
+    {% endif %}
+  </div>
+{% endif %}
+{{ page.content }}
+{% include "partials/source-file.html" %}
+{% include "partials/feedback.html" %}
+{% include "partials/comments.html" %}

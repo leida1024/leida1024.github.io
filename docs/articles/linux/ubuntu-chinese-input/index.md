@@ -1,9 +1,15 @@
 ---
 title: Ubuntu 22.04 中文输入与双拼设置
 description: 在 Ubuntu 22.04 中添加 Intelligent Pinyin 并启用小鹤双拼
+date:
+  created: 2024-01-17T15:18:57+08:00
+  updated: 2024-01-17T15:24:22+08:00
+categories:
+  - Linux
+slug: ubuntu-chinese-input
 original_created_at: 2024-01-17T07:18:57Z
 original_updated_at: 2024-01-17T07:24:22Z
-migrated_at: 2026-09-09
+migrated_at: 2026-09-09T18:26:09+08:00
 last_verified: 2024-01-17
 status: historical-tested
 sources:
@@ -14,13 +20,11 @@ contributors:
   - junxian-li-hpc
 ---
 
-# Ubuntu 22.04 中文输入与双拼设置
-
-<p class="article-meta">首次记录：2024-01-17 · 最后验证：2024-01-17 · 迁移：2026-09-09</p>
-
 !!! info "适用版本"
     以下界面和名称来自 Ubuntu 22.04 LTS 的 GNOME 桌面。后续版本的菜单位置可能
     不同，但仍可从系统的语言支持和键盘输入源进入。
+
+<!-- more -->
 
 ## 添加中文语言支持
 
