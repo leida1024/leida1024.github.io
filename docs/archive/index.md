@@ -5,3 +5,4 @@
 
 - [Hello World](../2023/05/03/hello-world/index.md)
 - [How to Do Great Work 阅读记录](../2023/07/21/how-to-do-great-work/index.md)
+- [myIssues 的 9 个 Issues 与 28 个 Discussions 迁移索引](myissues-migration/index.md)

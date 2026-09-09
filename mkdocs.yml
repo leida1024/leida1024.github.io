@@ -42,6 +42,7 @@ nav:
   - 文章: index.md
   - 历史页面:
       - archive/index.md
+      - myIssues 迁移索引: archive/myissues-migration/index.md
       - Hello World: 2023/05/03/hello-world/index.md
       - How to Do Great Work: 2023/07/21/how-to-do-great-work/index.md
 
