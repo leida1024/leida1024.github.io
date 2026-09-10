@@ -109,6 +109,96 @@
   color: var(--md-default-fg-color--light);
 }
 
+.content-shortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1rem;
+  margin: -0.5rem 0 1rem;
+}
+
+.content-shortcuts a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.content-shortcuts a:hover {
+  color: var(--md-accent-fg-color);
+}
+
+.content-shortcuts .twemoji {
+  display: inline-flex;
+}
+
+.topic-groups {
+  margin-top: 1rem;
+}
+
+.topic-list {
+  display: grid;
+  gap: 0;
+}
+
+.topic-list a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 2.15rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.topic-list a:last-child {
+  border-bottom: 0;
+}
+
+.topic-list small {
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.35rem;
+  height: 1.25rem;
+  margin-left: auto;
+  padding: 0 0.28rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 999px;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.62rem;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.year-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.year-list a {
+  display: grid;
+  gap: 0.2rem;
+  min-height: 5rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 6px;
+}
+
+.year-list a:hover {
+  border-color: var(--md-accent-fg-color);
+}
+
+.year-list strong {
+  color: var(--md-default-fg-color);
+  font-size: 1.15rem;
+}
+
+.year-list small {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+}
+
 .nav-count {
   display: inline-grid;
   place-items: center;
@@ -201,5 +291,17 @@
     width: 100%;
     margin-left: 0;
     text-align: right;
+  }
+
+  .content-shortcuts {
+    margin-top: -0.2rem;
+  }
+
+  .year-list {
+    grid-template-columns: 1fr;
+  }
+
+  .year-list a {
+    min-height: 0;
   }
 }

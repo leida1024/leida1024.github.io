@@ -1,5 +1,10 @@
 # 文章
 
+<nav class="content-shortcuts" aria-label="文章浏览入口" markdown>
+[:material-shape-outline: 主题](topics/index.md)
+[:material-calendar-clock: 时间归档](timeline/index.md)
+</nav>
+
 <div class="post-toolbar">
   <div class="post-toolbar__group">
     <label for="post-category">分类</label>

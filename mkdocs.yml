@@ -17,6 +17,8 @@ theme:
   features:
     - navigation.instant
     - navigation.instant.prefetch
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.expand
     - navigation.path
     - navigation.footer
@@ -46,6 +48,7 @@ theme:
 
 nav:
   - 文章: index.md
+  - 主题: topics/index.md
   - 迁移与历史:
       - archive/index.md
       - myIssues 迁移索引: archive/myissues-migration/index.md
