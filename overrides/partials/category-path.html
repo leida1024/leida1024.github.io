@@ -1,0 +1,36 @@
+{% set is_category_detail = page.url.startswith("category/") and page.url != "category/" %}
+{% set is_post = page.categories is defined and page.categories %}
+
+<nav class="md-path" aria-label="{{ lang.t('nav') }}">
+  <ol class="md-path__list">
+    <li class="md-path__item">
+      <a href="{{ nav.homepage.url | url }}" class="md-path__link">
+        <span class="md-ellipsis">主页</span>
+      </a>
+    </li>
+    <li class="md-path__item">
+      <a href="{{ 'category/' | url }}" class="md-path__link">
+        <span class="md-ellipsis">分类</span>
+      </a>
+    </li>
+    {% if is_category_detail %}
+      <li class="md-path__item">
+        <a href="{{ page.url | url }}" class="md-path__link" aria-current="page">
+          <span class="md-ellipsis">
+            {{- config.extra.category_labels.get(page.title, page.title) -}}
+          </span>
+        </a>
+      </li>
+    {% elif is_post %}
+      {% for category in page.categories %}
+        <li class="md-path__item">
+          <a href="{{ category.url | url }}" class="md-path__link">
+            <span class="md-ellipsis">
+              {{- config.extra.category_labels.get(category.title, category.title) -}}
+            </span>
+          </a>
+        </li>
+      {% endfor %}
+    {% endif %}
+  </ol>
+</nav>

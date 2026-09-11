@@ -15,7 +15,7 @@
                   </a>
                 </div>
               </div>
-              {% set category_tree_expand_all = true %}
+              {% set category_tree_expand_all = false %}
               {% include "partials/category-sidebar.html" %}
             </nav>
           </div>
@@ -23,6 +23,9 @@
       </div>
     {% endif %}
     <div class="md-content__inner">
+      {% if is_category and "navigation.path" in features %}
+        {% include "partials/category-path.html" %}
+      {% endif %}
       <header class="md-typeset">
         {% if page.url.startswith("category/") %}
           <h1>{{ config.extra.category_labels.get(page.title, page.title) }}</h1>

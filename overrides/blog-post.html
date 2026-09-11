@@ -1,6 +1,5 @@
 {% extends "main.html" %}
 {% import "partials/nav-item.html" as item with context %}
-{% import "partials/path-item.html" as path_item with context %}
 
 {% block container %}
   <div class="md-content md-content--post" data-md-component="content">
@@ -10,9 +9,12 @@
           <nav class="md-nav md-nav--primary" aria-label="文章导航" data-category-tree>
             <div class="md-post__back">
               <div class="md-nav__title md-nav__container">
-                <a href="{{ page.parent.url | url }}" class="md-nav__link">
+                {% set primary_category = page.categories | first %}
+                <a href="{{ primary_category.url | url }}" class="md-nav__link">
                   {% include ".icons/material/arrow-left.svg" %}
-                  <span class="md-ellipsis">返回主页</span>
+                  <span class="md-ellipsis">
+                    返回{{ config.extra.category_labels.get(primary_category.title, primary_category.title) }}分类
+                  </span>
                 </a>
               </div>
             </div>
@@ -86,26 +88,15 @@
         </div>
       </div>
     </div>
-    <article class="md-content__inner md-typeset">
+    <div class="md-content__inner">
       {% if "navigation.path" in features %}
-        <nav class="md-path" aria-label="{{ lang.t('nav') }}">
-          <ol class="md-path__list">
-            {{ path_item.render(nav.homepage) }}
-            {% for category in page.categories %}
-              <li class="md-path__item">
-                <a href="{{ category.url | url }}" class="md-path__link">
-                  <span class="md-ellipsis">
-                    {{- config.extra.category_labels.get(category.title, category.title) -}}
-                  </span>
-                </a>
-              </li>
-            {% endfor %}
-          </ol>
-        </nav>
+        {% include "partials/category-path.html" %}
       {% endif %}
-      {% block content %}
-        {% include "partials/content.html" %}
-      {% endblock %}
-    </article>
+      <article class="md-typeset">
+        {% block content %}
+          {% include "partials/content.html" %}
+        {% endblock %}
+      </article>
+    </div>
   </div>
 {% endblock %}

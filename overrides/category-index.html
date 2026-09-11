@@ -20,16 +20,21 @@
         </div>
       </div>
     </div>
-    <article class="md-content__inner md-typeset">
-      {{ page.content }}
-      <nav class="category-index" aria-label="全部分类">
-        {% for category in site_categories %}
-          <a href="{{ category.url | url }}">
-            <span>{{ config.extra.category_labels.get(category.title, category.title) }}</span>
-            <small aria-label="{{ category.posts | length }} 篇文章">{{ category.posts | length }}</small>
-          </a>
-        {% endfor %}
-      </nav>
-    </article>
+    <div class="md-content__inner">
+      {% if "navigation.path" in features %}
+        {% include "partials/category-path.html" %}
+      {% endif %}
+      <article class="md-typeset">
+        {{ page.content }}
+        <nav class="category-index" aria-label="全部分类">
+          {% for category in site_categories %}
+            <a href="{{ category.url | url }}">
+              <span>{{ config.extra.category_labels.get(category.title, category.title) }}</span>
+              <small aria-label="{{ category.posts | length }} 篇文章">{{ category.posts | length }}</small>
+            </a>
+          {% endfor %}
+        </nav>
+      </article>
+    </div>
   </div>
 {% endblock %}

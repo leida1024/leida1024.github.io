@@ -10,11 +10,11 @@
 </div>
 
 {% for category in site_categories %}
-  {% set current = category in page.categories if page.categories is defined else false %}
+  {% set current = category.url == page.url or (page.categories is defined and category in page.categories) %}
   <details class="md-post__category" data-category-branch
     {% if category_tree_expand_all or current %}open{% endif %}>
     <summary class="md-post__title md-post__category-title">
-      <span class="md-nav__link">
+      <span class="md-nav__link{% if current %} md-nav__link--active{% endif %}">
         <span class="md-ellipsis">{{ config.extra.category_labels.get(category.title, category.title) }}</span>
         <span class="nav-count" aria-label="{{ category.posts | length }} 篇文章">
           {{- category.posts | length -}}

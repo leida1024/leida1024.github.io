@@ -62,8 +62,17 @@
   {% endif %}
 {% endmacro %}
 {% macro render(nav_item, path, level, parent) %}
+  {% set is_post = page.categories is defined and page.categories %}
+  {% set active = nav_item.active %}
+  {% if is_post and level == 1 and nav_item.is_homepage %}
+    {% set active = false %}
+  {% elif is_post and level == 1 and nav_item.title == "分类" %}
+    {% set active = true %}
+  {% elif is_post and level > 1 and nav_item in page.categories %}
+    {% set active = true %}
+  {% endif %}
   {% set class = "md-nav__item" %}
-  {% if nav_item.active %}
+  {% if active %}
     {% set class = class ~ " md-nav__item--active" %}
   {% endif %}
   {% if nav_item.pages %}
@@ -82,7 +91,7 @@
     {% endif %}
     {% set index = _.index %}
     {% if "navigation.tabs" in features %}
-      {% if level == 1 and nav_item.active %}
+      {% if level == 1 and active %}
         {% set class = class ~ " md-nav__item--section" %}
         {% set is_section = true %}
       {% endif %}
@@ -106,7 +115,7 @@
     {% endif %}
     <li class="{{ class }} md-nav__item--nested">
       {% if not is_pruned %}
-        {% set checked = "checked" if nav_item.active %}
+        {% set checked = "checked" if active %}
         {% if "navigation.expand" in features and not checked %}
           {% set indeterminate = "md-toggle--indeterminate" %}
         {% endif %}
@@ -131,7 +140,7 @@
             {% endif %}
           </div>
         {% endif %}
-        <nav class="md-nav" data-md-level="{{ level }}" aria-labelledby="{{ path }}_label" aria-expanded="{{ nav_item.active | tojson }}">
+        <nav class="md-nav" data-md-level="{{ level }}" aria-labelledby="{{ path }}_label" aria-expanded="{{ active | tojson }}">
           <label class="md-nav__title" for="{{ path }}">
             <span class="md-nav__icon md-icon"></span>
             {{ render_title(nav_item) }}
@@ -171,7 +180,7 @@
     </li>
   {% else %}
     <li class="{{ class }}">
-      <a href="{{ nav_item.url | url }}" class="md-nav__link">
+      <a href="{{ nav_item.url | url }}" class="md-nav__link{% if active %} md-nav__link--active{% endif %}">
         {{ render_content(nav_item) }}
       </a>
     </li>
