@@ -1,8 +1,11 @@
 # Notes
 
-站点源码。文章位于 `docs/`；在 VS Code 中编辑 Markdown，提交并推送到
+站点源码。公开内容位于 `docs/`；在 VS Code 中编辑 Markdown，提交并推送到
 `main` 后，GitHub Actions 会自动构建并发布到
 <https://leida1024.github.io/>。
+
+站点方向、迁移审核和来源清单等内部记录统一保存在 `management/`，不参与站点
+构建。仓库的长期维护约定见 `CLAUDE.md`。
 
 ## 本地预览
 
@@ -32,7 +35,6 @@ docs/articles/<分类>/<文章名>/
 - `文章` 是按创建时间排列的完整内容流，可按分类筛选和切换排序。
 - `主题` 将现有分类组织为系统开发、硬件平台、软件效率和基础记录四组。
 - `时间归档` 的年份内容页与 `分类` 页由 Material Blog 插件根据文章 frontmatter 自动生成。
-- `迁移与历史` 保存迁移审计和旧链接说明，不参与普通文章分类。
 
 新增或重命名分类时，同时更新 `docs/topics/index.md` 中的分组、链接和文章数；新增年份
 时更新 `docs/timeline/index.md`。
