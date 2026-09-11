@@ -1,30 +1,41 @@
 {% extends "main.html" %}
 {% block container %}
   {% set is_category = page.url.startswith("category/") %}
-  <div class="md-content{% if is_category %} md-content--post{% endif %}" data-md-component="content">
-    {% if is_category %}
+  {% set is_timeline_archive = page.url.startswith("timeline/") %}
+  <div class="md-content{% if is_category or is_timeline_archive %} md-content--post{% endif %}" data-md-component="content">
+    {% if is_category or is_timeline_archive %}
       <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
         <div class="md-sidebar__scrollwrap">
           <div class="md-sidebar__inner md-post">
-            <nav class="md-nav md-nav--primary" aria-label="分类文章导航" data-category-tree>
+            <nav class="md-nav md-nav--primary"
+              aria-label="{% if is_category %}分类文章导航{% else %}时间线文章导航{% endif %}"
+              {% if is_category %}data-category-tree{% endif %}>
               <div class="md-post__back">
                 <div class="md-nav__title md-nav__container">
-                  <a href="{{ 'category/' | url }}" class="md-nav__link">
+                  <a href="{{ ('category/' if is_category else 'timeline/') | url }}" class="md-nav__link">
                     {% include ".icons/material/arrow-left.svg" %}
-                    <span class="md-ellipsis">所有分类</span>
+                    <span class="md-ellipsis">{% if is_category %}所有分类{% else %}完整时间线{% endif %}</span>
                   </a>
                 </div>
               </div>
-              {% set category_tree_expand_all = false %}
-              {% include "partials/category-sidebar.html" %}
+              {% if is_category %}
+                {% set category_tree_expand_all = false %}
+                {% include "partials/category-sidebar.html" %}
+              {% else %}
+                {% include "partials/timeline-sidebar.html" %}
+              {% endif %}
             </nav>
           </div>
         </div>
       </div>
     {% endif %}
     <div class="md-content__inner">
-      {% if is_category and "navigation.path" in features %}
-        {% include "partials/category-path.html" %}
+      {% if "navigation.path" in features %}
+        {% if is_category %}
+          {% include "partials/category-path.html" %}
+        {% elif is_timeline_archive %}
+          {% include "partials/timeline-path.html" %}
+        {% endif %}
       {% endif %}
       <header class="md-typeset">
         {% if page.url.startswith("category/") %}

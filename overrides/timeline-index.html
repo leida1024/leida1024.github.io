@@ -16,7 +16,7 @@
     {% for year in timeline_years %}
       <details class="timeline-tree__year" open>
         <summary>
-          <strong>{{ year.year }}</strong>
+          <strong><a href="{{ year.url | url }}">{{ year.year }}</a></strong>
           <small>{{ year.count }} 篇</small>
         </summary>
         <div class="timeline-tree__months">

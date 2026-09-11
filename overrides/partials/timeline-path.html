@@ -1,0 +1,19 @@
+<nav class="md-path" aria-label="{{ lang.t('nav') }}">
+  <ol class="md-path__list">
+    <li class="md-path__item">
+      <a href="{{ nav.homepage.url | url }}" class="md-path__link">
+        <span class="md-ellipsis">主页</span>
+      </a>
+    </li>
+    <li class="md-path__item">
+      <a href="{{ 'timeline/' | url }}" class="md-path__link">
+        <span class="md-ellipsis">时间线</span>
+      </a>
+    </li>
+    <li class="md-path__item">
+      <a href="{{ page.url | url }}" class="md-path__link" aria-current="page">
+        <span class="md-ellipsis">{{ page.title }}</span>
+      </a>
+    </li>
+  </ol>
+</nav>

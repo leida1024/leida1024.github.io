@@ -43,9 +43,11 @@ def on_nav(nav, *, config, files):
 
 
 def on_page_context(context, *, page, config, nav):
-    if page.url.startswith("category/"):
+    is_category = page.url.startswith("category/")
+    is_timeline_archive = page.url.startswith("timeline/") and page.url != "timeline/"
+    if is_category or is_timeline_archive:
         hidden = set(page.meta.get("hide", []))
-        hidden.add("navigation")
+        hidden.update(("navigation", "toc"))
         page.meta["hide"] = sorted(hidden)
 
     section = next((item for item in nav.items if item.title == "分类"), None)
@@ -74,6 +76,7 @@ def on_page_context(context, *, page, config, nav):
     context["timeline_years"] = [
         {
             "year": year,
+            "url": f"timeline/{year}/",
             "count": sum(len(posts) for posts in months.values()),
             "months": [
                 {"month": month, "posts": month_posts}

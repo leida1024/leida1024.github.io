@@ -6,6 +6,10 @@
   --md-typeset-a-color: #1d6b61;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 [data-md-color-scheme="slate"] {
   --md-primary-fg-color: #214f48;
   --md-primary-fg-color--light: #327267;
@@ -347,6 +351,22 @@ details.md-post__category[open] > summary .md-nav__link::before {
 
 .timeline-tree__year > summary strong {
   font-size: 1rem;
+}
+
+.timeline-tree__year > summary strong a {
+  color: inherit;
+}
+
+.timeline-tree__year > summary strong a:hover {
+  color: var(--md-accent-fg-color);
+}
+
+details.timeline-sidebar__month {
+  margin-left: 0.6rem;
+}
+
+.timeline-sidebar__month > summary .md-nav__link {
+  font-weight: 600;
 }
 
 .timeline-tree__months {

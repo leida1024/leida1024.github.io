@@ -1,0 +1,49 @@
+<div class="category-tree-controls" data-timeline-controls>
+  <button type="button" data-timeline-expand title="展开全部年份和月份">
+    {% include ".icons/material/arrow-expand-all.svg" %}
+    <span>展开全部</span>
+  </button>
+  <button type="button" data-timeline-collapse title="收起全部年份和月份">
+    {% include ".icons/material/arrow-collapse-all.svg" %}
+    <span>收起全部</span>
+  </button>
+</div>
+
+<div class="timeline-sidebar" data-timeline-tree>
+  {% for year in timeline_years %}
+    {% set current_year = year.url == page.url %}
+    <details class="md-post__category"{% if current_year %} open{% endif %}>
+      <summary class="md-post__title md-post__category-title">
+        <span class="md-nav__link{% if current_year %} md-nav__link--active{% endif %}">
+          <a href="{{ year.url | url }}">{{ year.year }}</a>
+          <span class="nav-count" aria-label="{{ year.count }} 篇文章">{{ year.count }}</span>
+        </span>
+      </summary>
+      <nav class="md-nav" aria-label="{{ year.year }} 年文章">
+        {% for month in year.months %}
+          <details class="md-post__category timeline-sidebar__month">
+            <summary class="md-post__title">
+              <span class="md-nav__link">
+                <span>{{ "%02d" | format(month.month) }} 月</span>
+                <span class="nav-count" aria-label="{{ month.posts | length }} 篇文章">
+                  {{- month.posts | length -}}
+                </span>
+              </span>
+            </summary>
+            <nav class="md-nav" aria-label="{{ year.year }} 年 {{ month.month }} 月文章">
+              <ul class="md-nav__list">
+                {% for post in month.posts %}
+                  <li class="md-nav__item">
+                    <a href="{{ post.url | url }}" class="md-nav__link">
+                      <span class="md-ellipsis">{{ post.title }}</span>
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </nav>
+          </details>
+        {% endfor %}
+      </nav>
+    </details>
+  {% endfor %}
+</div>
