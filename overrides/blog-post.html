@@ -1,48 +1,24 @@
 {% extends "main.html" %}
 {% import "partials/nav-item.html" as item with context %}
+{% import "partials/path-item.html" as path_item with context %}
 
 {% block container %}
   <div class="md-content md-content--post" data-md-component="content">
     <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
       <div class="md-sidebar__scrollwrap">
         <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary" aria-label="文章导航">
+          <nav class="md-nav md-nav--primary" aria-label="文章导航" data-category-tree>
             <div class="md-post__back">
               <div class="md-nav__title md-nav__container">
                 <a href="{{ page.parent.url | url }}" class="md-nav__link">
                   {% include ".icons/material/arrow-left.svg" %}
-                  <span class="md-ellipsis">全部文章</span>
+                  <span class="md-ellipsis">返回主页</span>
                 </a>
               </div>
             </div>
 
-            {% for category in page.categories %}
-              <ul class="md-post__category md-nav__list">
-                <li class="md-nav__item md-nav__item--section">
-                  <div class="md-post__title md-post__category-title">
-                    <a href="{{ category.url | url }}" class="md-nav__link">
-                      <span class="md-ellipsis">{{ category.title }}</span>
-                      <span class="nav-count" aria-label="{{ category.posts | length }} 篇文章">
-                        {{- category.posts | length -}}
-                      </span>
-                    </a>
-                  </div>
-                  <nav class="md-nav" aria-label="{{ category.title }} 分类文章">
-                    <ul class="md-nav__list">
-                      {% for post in category.posts %}
-                        {% set active = " md-nav__link--active" if post == page else "" %}
-                        <li class="md-nav__item">
-                          <a href="{{ post.url | url }}" class="md-nav__link{{ active }}"
-                            {% if post == page %}aria-current="page"{% endif %}>
-                            <span class="md-ellipsis">{{ post.title }}</span>
-                          </a>
-                        </li>
-                      {% endfor %}
-                    </ul>
-                  </nav>
-                </li>
-              </ul>
-            {% endfor %}
+            {% set category_tree_expand_all = false %}
+            {% include "partials/category-sidebar.html" %}
 
             <ul class="md-post__meta md-nav__list">
               <li class="md-nav__item md-nav__item--section">
@@ -112,7 +88,20 @@
     </div>
     <article class="md-content__inner md-typeset">
       {% if "navigation.path" in features %}
-        {% include "partials/path.html" %}
+        <nav class="md-path" aria-label="{{ lang.t('nav') }}">
+          <ol class="md-path__list">
+            {{ path_item.render(nav.homepage) }}
+            {% for category in page.categories %}
+              <li class="md-path__item">
+                <a href="{{ category.url | url }}" class="md-path__link">
+                  <span class="md-ellipsis">
+                    {{- config.extra.category_labels.get(category.title, category.title) -}}
+                  </span>
+                </a>
+              </li>
+            {% endfor %}
+          </ol>
+        </nav>
       {% endif %}
       {% block content %}
         {% include "partials/content.html" %}

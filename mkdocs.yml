@@ -47,8 +47,11 @@ theme:
         name: 切换到浅色模式
 
 nav:
-  - 文章: index.md
-  - 主题: topics/index.md
+  - 主页: index.md
+  - 专题: topics/index.md
+
+hooks:
+  - hooks.py
 
 plugins:
   - blog:
@@ -57,7 +60,7 @@ plugins:
       post_url_format: "{categories}/{slug}"
       post_date_format: "yyyy-MM-dd HH:mm:ss XXX"
       post_excerpt: required
-      archive_name: 时间归档
+      archive_name: 时间线
       archive_url_format: "timeline/{date}"
       categories_name: 分类
       categories_url_format: "category/{slug}"
@@ -89,8 +92,17 @@ extra_css:
 extra_javascript:
   - javascripts/sort-posts.js
   - javascripts/comments.js
+  - javascripts/category-tree.js
+  - javascripts/timeline-tree.js
 
 extra:
+  category_labels:
+    Network: 网络
+    Software: 软件
+    Office: 办公
+    Security: 安全
+    Reading: 阅读
+    Site: 站点
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/leida1024

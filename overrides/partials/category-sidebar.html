@@ -1,0 +1,38 @@
+<div class="category-tree-controls" data-category-controls>
+  <button type="button" data-category-expand title="展开全部分类文章">
+    {% include ".icons/material/arrow-expand-all.svg" %}
+    <span>展开全部</span>
+  </button>
+  <button type="button" data-category-collapse title="收起全部分类文章">
+    {% include ".icons/material/arrow-collapse-all.svg" %}
+    <span>收起全部</span>
+  </button>
+</div>
+
+{% for category in site_categories %}
+  {% set current = category in page.categories if page.categories is defined else false %}
+  <details class="md-post__category" data-category-branch
+    {% if category_tree_expand_all or current %}open{% endif %}>
+    <summary class="md-post__title md-post__category-title">
+      <span class="md-nav__link">
+        <span class="md-ellipsis">{{ config.extra.category_labels.get(category.title, category.title) }}</span>
+        <span class="nav-count" aria-label="{{ category.posts | length }} 篇文章">
+          {{- category.posts | length -}}
+        </span>
+      </span>
+    </summary>
+    <nav class="md-nav" aria-label="{{ config.extra.category_labels.get(category.title, category.title) }} 分类文章">
+      <ul class="md-nav__list">
+        {% for post in category.posts %}
+          {% set active = " md-nav__link--active" if post == page else "" %}
+          <li class="md-nav__item">
+            <a href="{{ post.url | url }}" class="md-nav__link{{ active }}"
+              {% if post == page %}aria-current="page"{% endif %}>
+              <span class="md-ellipsis">{{ post.title }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </details>
+{% endfor %}

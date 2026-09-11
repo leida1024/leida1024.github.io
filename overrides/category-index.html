@@ -1,0 +1,35 @@
+{% extends "main.html" %}
+
+{% block container %}
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary" aria-label="分类文章导航" data-category-tree>
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="{{ nav.homepage.url | url }}" class="md-nav__link">
+                  {% include ".icons/material/arrow-left.svg" %}
+                  <span class="md-ellipsis">返回主页</span>
+                </a>
+              </div>
+            </div>
+            {% set category_tree_expand_all = true %}
+            {% include "partials/category-sidebar.html" %}
+          </nav>
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      {{ page.content }}
+      <nav class="category-index" aria-label="全部分类">
+        {% for category in site_categories %}
+          <a href="{{ category.url | url }}">
+            <span>{{ config.extra.category_labels.get(category.title, category.title) }}</span>
+            <small aria-label="{{ category.posts | length }} 篇文章">{{ category.posts | length }}</small>
+          </a>
+        {% endfor %}
+      </nav>
+    </article>
+  </div>
+{% endblock %}

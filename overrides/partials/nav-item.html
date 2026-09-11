@@ -11,12 +11,16 @@
   {% endif %}
 {% endmacro %}
 {% macro render_title(nav_item) %}
+  {% set title = nav_item.typeset.title if nav_item.typeset else nav_item.title %}
+  {% if nav_item.url and "category/" in nav_item.url %}
+    {% set title = config.extra.category_labels.get(title, title) %}
+  {% endif %}
   {% if nav_item.typeset %}
     <span class="md-typeset">
-      {{ nav_item.typeset.title }}
+      {{ title }}
     </span>
   {% else %}
-    {{ nav_item.title }}
+    {{ title }}
   {% endif %}
 {% endmacro %}
 {% macro render_content(nav_item, ref) %}

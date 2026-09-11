@@ -1,13 +1,11 @@
 ---
-title: 时间归档
+title: 时间线
+template: timeline-index.html
 hide:
+  - navigation
   - toc
 ---
 
-# 时间归档
+# 时间线
 
-<nav class="year-list" aria-label="按年份浏览文章">
-  <a href="2025/"><strong>2025</strong><small>2 篇</small></a>
-  <a href="2024/"><strong>2024</strong><small>14 篇</small></a>
-  <a href="2023/"><strong>2023</strong><small>21 篇</small></a>
-</nav>
+按创建时间浏览文章。年份下按月份排列，展开月份可以查看当月文章。

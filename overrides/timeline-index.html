@@ -1,0 +1,45 @@
+{% extends "main.html" %}
+
+{% block content %}
+  {{ page.content }}
+  <div class="category-tree-controls timeline-tree-controls" data-timeline-controls>
+    <button type="button" data-timeline-expand title="展开全部年份和月份">
+      {% include ".icons/material/arrow-expand-all.svg" %}
+      <span>展开全部</span>
+    </button>
+    <button type="button" data-timeline-collapse title="收起全部年份和月份">
+      {% include ".icons/material/arrow-collapse-all.svg" %}
+      <span>收起全部</span>
+    </button>
+  </div>
+  <nav class="timeline-tree" aria-label="按年份和月份浏览文章" data-timeline-tree>
+    {% for year in timeline_years %}
+      <details class="timeline-tree__year" open>
+        <summary>
+          <strong>{{ year.year }}</strong>
+          <small>{{ year.count }} 篇</small>
+        </summary>
+        <div class="timeline-tree__months">
+          {% for month in year.months %}
+            <details class="timeline-tree__month">
+              <summary>
+                <span>{{ "%02d" | format(month.month) }} 月</span>
+                <small>{{ month.posts | length }} 篇</small>
+              </summary>
+              <ul>
+                {% for post in month.posts %}
+                  <li>
+                    <time datetime="{{ post.config.date.created }}">
+                      {{- post.config.date.created.strftime("%m-%d") -}}
+                    </time>
+                    <a href="{{ post.url | url }}">{{ post.title }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </details>
+          {% endfor %}
+        </div>
+      </details>
+    {% endfor %}
+  </nav>
+{% endblock %}

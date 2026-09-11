@@ -1,0 +1,43 @@
+{% extends "main.html" %}
+{% block container %}
+  {% set is_category = page.url.startswith("category/") %}
+  <div class="md-content{% if is_category %} md-content--post{% endif %}" data-md-component="content">
+    {% if is_category %}
+      <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+        <div class="md-sidebar__scrollwrap">
+          <div class="md-sidebar__inner md-post">
+            <nav class="md-nav md-nav--primary" aria-label="分类文章导航" data-category-tree>
+              <div class="md-post__back">
+                <div class="md-nav__title md-nav__container">
+                  <a href="{{ 'category/' | url }}" class="md-nav__link">
+                    {% include ".icons/material/arrow-left.svg" %}
+                    <span class="md-ellipsis">所有分类</span>
+                  </a>
+                </div>
+              </div>
+              {% set category_tree_expand_all = true %}
+              {% include "partials/category-sidebar.html" %}
+            </nav>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    <div class="md-content__inner">
+      <header class="md-typeset">
+        {% if page.url.startswith("category/") %}
+          <h1>{{ config.extra.category_labels.get(page.title, page.title) }}</h1>
+        {% else %}
+          {{ page.content }}
+        {% endif %}
+      </header>
+      {% for post in posts %}
+        {% include "partials/post.html" %}
+      {% endfor %}
+      {% if pagination %}
+        {% block pagination %}
+          {% include "partials/pagination.html" %}
+        {% endblock %}
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}
