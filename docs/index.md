@@ -15,15 +15,17 @@
       <option value="">全部分类</option>
     </select>
   </div>
-  <div class="post-toolbar__group">
-    <label for="post-sort">排序</label>
-    <select id="post-sort" data-post-sort>
-      <option value="created-desc">最新创建</option>
-      <option value="updated-desc">最近更新</option>
-      <option value="created-asc">最早创建</option>
-      <option value="title-asc">标题</option>
-    </select>
-  </div>
+  <fieldset class="post-toolbar__group post-sort-options" data-post-sort>
+    <legend>排序</legend>
+    <div class="post-sort-options__choices" role="radiogroup" aria-label="文章排序方式">
+      <label><input type="radio" name="post-sort" value="created-desc" checked>创建时间：新到旧</label>
+      <label><input type="radio" name="post-sort" value="created-asc">创建时间：旧到新</label>
+      <label><input type="radio" name="post-sort" value="updated-desc">更新时间：新到旧</label>
+      <label><input type="radio" name="post-sort" value="updated-asc">更新时间：旧到新</label>
+      <label><input type="radio" name="post-sort" value="title-asc">标题：升序（A 到 Z）</label>
+      <label><input type="radio" name="post-sort" value="title-desc">标题：降序（Z 到 A）</label>
+    </div>
+  </fieldset>
   <span class="post-toolbar__count" data-post-count aria-live="polite"></span>
 </div>
 

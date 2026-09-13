@@ -25,8 +25,12 @@
       "created-desc": (a, b) => number(b, "postCreated") - number(a, "postCreated"),
       "updated-desc": (a, b) => number(b, "postUpdated") - number(a, "postUpdated"),
       "created-asc": (a, b) => number(a, "postCreated") - number(b, "postCreated"),
-      "title-asc": (a, b) => collator.compare(title(a), title(b))
+      "updated-asc": (a, b) => number(a, "postUpdated") - number(b, "postUpdated"),
+      "title-asc": (a, b) => collator.compare(title(a), title(b)),
+      "title-desc": (a, b) => collator.compare(title(b), title(a))
     };
+
+    const selectedSort = () => sortControl.querySelector("input:checked")?.value || "created-desc";
 
     const categoryCounts = new Map();
     posts.forEach(post => {
@@ -43,7 +47,7 @@
 
     const update = () => {
       const selectedCategory = categoryControl.value;
-      const comparator = comparators[sortControl.value] || comparators["created-desc"];
+      const comparator = comparators[selectedSort()] || comparators["created-desc"];
       let visible = 0;
 
       posts.sort(comparator);

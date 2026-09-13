@@ -91,6 +91,7 @@ extra_css:
 
 extra_javascript:
   - javascripts/sort-posts.js
+  - javascripts/nav-mode.js
   - javascripts/comments.js
   - javascripts/category-tree.js
   - javascripts/timeline-tree.js
