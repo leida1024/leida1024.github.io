@@ -23,6 +23,6 @@
     </ul>
   {% endif %}
 </nav>
-{% if page.config and page.config.date and page.config.date.created %}
+{% if page and page.meta.published_at %}
   {% include "partials/article-info.html" %}
 {% endif %}

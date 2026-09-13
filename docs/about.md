@@ -15,7 +15,7 @@ hide:
 
 - [首页](index.md)：按最近更新浏览全部文章。
 - [专题](topics/index.md)：按阅读方向进入文章。
-- [时间线](timeline/index.md)：按创建年份和月份浏览文章。
+- [时间线](timeline/index.md)：按发布时间年份和月份浏览文章。
 
 ## 代码仓库
 

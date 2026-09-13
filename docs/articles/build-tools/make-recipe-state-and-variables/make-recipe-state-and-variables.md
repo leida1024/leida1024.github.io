@@ -4,12 +4,17 @@ description: 区分 make 变量、shell 变量与递归 make，并选择正确�
 date:
   created: 2024-03-03T15:43:11+08:00
   updated: 2024-03-03T15:43:11+08:00
+created_at: 2024-03-03T15:43:11+08:00
+published_at: 2024-03-03T15:43:11+08:00
+updated_at: 2024-03-03T15:43:11+08:00
+update_history: []
 categories:
   - 构建工具
 slug: make-recipe-state-and-variables
-original_created_at: 2024-03-03T15:43:11+08:00
-original_updated_at: 2024-03-03T15:43:11+08:00
-migrated_at: 2026-09-10T00:20:43+08:00
+provenance:
+  original_created_at: 2024-03-03T15:43:11+08:00
+  original_updated_at: 2024-03-03T15:43:11+08:00
+  migrated_at: 2026-09-10T00:20:43+08:00
 last_verified: null
 status: rewritten-unverified
 sources:

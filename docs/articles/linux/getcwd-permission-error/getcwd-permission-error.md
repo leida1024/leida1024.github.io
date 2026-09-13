@@ -4,12 +4,17 @@ description: tmux 或 SSH 启动时报 cannot access parent directories 时的�
 date:
   created: 2024-01-28T10:58:48+08:00
   updated: 2024-01-28T10:58:48+08:00
+created_at: 2024-01-28T10:58:48+08:00
+published_at: 2024-01-28T10:58:48+08:00
+updated_at: 2024-01-28T10:58:48+08:00
+update_history: []
 categories:
   - Linux
 slug: getcwd-permission-error
-original_created_at: 2024-01-28T02:58:48Z
-original_updated_at: 2024-01-28T02:58:48Z
-migrated_at: 2026-09-09T20:54:56+08:00
+provenance:
+  original_created_at: 2024-01-28T02:58:48Z
+  original_updated_at: 2024-01-28T02:58:48Z
+  migrated_at: 2026-09-09T20:54:56+08:00
 last_verified: null
 status: diagnosis-not-retested
 sources:

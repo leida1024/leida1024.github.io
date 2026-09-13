@@ -4,12 +4,19 @@ description: Ubuntu 22.04 上使用旧 Xenial PPA 和处理 Firefox Snap 错误�
 date:
   created: 2023-09-01T09:54:15+08:00
   updated: 2024-01-18T15:17:04+08:00
+created_at: 2023-09-01T09:54:15+08:00
+published_at: 2023-09-01T09:54:15+08:00
+updated_at: 2024-01-18T15:17:04+08:00
+update_history:
+  - at: 2024-01-18T15:17:04+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - Linux
 slug: systemback-ubuntu-image-history
-original_created_at: 2023-09-01T01:54:15Z
-original_updated_at: 2024-01-18T07:17:04Z
-migrated_at: 2026-09-09T20:54:56+08:00
+provenance:
+  original_created_at: 2023-09-01T01:54:15Z
+  original_updated_at: 2024-01-18T07:17:04Z
+  migrated_at: 2026-09-09T20:54:56+08:00
 last_verified: 2024-01-18
 status: deprecated
 sources:

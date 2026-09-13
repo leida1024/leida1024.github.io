@@ -4,12 +4,19 @@ description: Ubuntu 同时安装多个 Java 版本时切换 java 命令并核对
 date:
   created: 2023-09-04T22:35:05+08:00
   updated: 2023-09-04T22:36:01+08:00
+created_at: 2023-09-04T22:35:05+08:00
+published_at: 2023-09-04T22:35:05+08:00
+updated_at: 2023-09-04T22:36:01+08:00
+update_history:
+  - at: 2023-09-04T22:36:01+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - Linux
 slug: java-alternatives
-original_created_at: 2023-09-04T14:35:05Z
-original_updated_at: 2023-09-04T14:36:01Z
-migrated_at: 2026-09-09T20:54:56+08:00
+provenance:
+  original_created_at: 2023-09-04T14:35:05Z
+  original_updated_at: 2023-09-04T14:36:01Z
+  migrated_at: 2026-09-09T20:54:56+08:00
 last_verified: 2023-09-04
 status: historical-tested
 sources:

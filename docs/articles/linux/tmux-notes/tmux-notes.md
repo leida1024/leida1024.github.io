@@ -4,12 +4,19 @@ description: 保持窗格工作目录、启用鼠标，并让 GNOME Terminal 进
 date:
   created: 2023-09-01T08:52:15+08:00
   updated: 2024-01-22T15:39:11+08:00
+created_at: 2023-09-01T08:52:15+08:00
+published_at: 2023-09-01T08:52:15+08:00
+updated_at: 2024-01-22T15:39:11+08:00
+update_history:
+  - at: 2024-01-22T15:39:11+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - Linux
 slug: tmux-notes
-original_created_at: 2023-09-01T00:52:15Z
-original_updated_at: 2024-01-22T07:39:11Z
-migrated_at: 2026-09-09T20:54:56+08:00
+provenance:
+  original_created_at: 2023-09-01T00:52:15Z
+  original_updated_at: 2024-01-22T07:39:11Z
+  migrated_at: 2026-09-09T20:54:56+08:00
 last_verified: 2024-01-17
 status: historical-tested
 sources:

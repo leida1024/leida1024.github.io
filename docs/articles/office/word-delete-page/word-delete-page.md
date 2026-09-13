@@ -4,13 +4,20 @@ description: 用“定位”选择当前页，并根据分页符、分节符或�
 date:
   created: 2025-11-03T10:52:28+08:00
   updated: 2025-11-03T10:52:43+08:00
+created_at: 2025-11-03T10:52:28+08:00
+published_at: 2025-11-03T10:52:28+08:00
+updated_at: 2025-11-03T10:52:43+08:00
+update_history:
+  - at: 2025-11-03T10:52:43+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - Office
 slug: word-delete-page
-original_created_at: 2025-11-03T10:52:28+08:00
-original_updated_at: 2025-11-03T10:52:43+08:00
-source_committed_at: 2026-02-26T16:01:13+08:00
-migrated_at: 2026-09-10T00:20:43+08:00
+provenance:
+  original_created_at: 2025-11-03T10:52:28+08:00
+  original_updated_at: 2025-11-03T10:52:43+08:00
+  source_committed_at: 2026-02-26T16:01:13+08:00
+  migrated_at: 2026-09-10T00:20:43+08:00
 last_verified: null
 status: expanded-note
 sources:

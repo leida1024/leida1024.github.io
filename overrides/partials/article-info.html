@@ -7,31 +7,20 @@
     <div class="article-info__item">
       <dt>
         {% include ".icons/material/calendar.svg" %}
-        创建
+        发布于
       </dt>
       <dd>
-        <time datetime="{{ page.config.date.created }}">{{ page.config.date.created | date }}</time>
+        <time datetime="{{ page.meta.published_at }}">{{ page.meta.published_at | date }}</time>
       </dd>
     </div>
-    {% if page.config.date.updated %}
+    {% if page.meta.updated_at and page.meta.updated_at != page.meta.published_at %}
       <div class="article-info__item">
         <dt>
           {% include ".icons/material/calendar-clock.svg" %}
-          更新
+          更新于
         </dt>
         <dd>
-          <time datetime="{{ page.config.date.updated }}">{{ page.config.date.updated | date }}</time>
-        </dd>
-      </div>
-    {% endif %}
-    {% if page.meta.migrated_at %}
-      <div class="article-info__item">
-        <dt>
-          {% include ".icons/material/transfer.svg" %}
-          迁移
-        </dt>
-        <dd>
-          <time datetime="{{ page.meta.migrated_at }}">{{ page.meta.migrated_at | date }}</time>
+          <time datetime="{{ page.meta.updated_at }}">{{ page.meta.updated_at | date }}</time>
         </dd>
       </div>
     {% endif %}

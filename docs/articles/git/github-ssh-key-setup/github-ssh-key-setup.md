@@ -4,12 +4,19 @@ description: 使用 Ed25519 生成独立密钥、加入 ssh-agent 并验证 GitH
 date:
   created: 2024-01-18T10:18:43+08:00
   updated: 2024-01-18T10:25:09+08:00
+created_at: 2024-01-18T10:18:43+08:00
+published_at: 2024-01-18T10:18:43+08:00
+updated_at: 2024-01-18T10:25:09+08:00
+update_history:
+  - at: 2024-01-18T10:25:09+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - Git
 slug: github-ssh-key-setup
-original_created_at: 2024-01-18T02:18:43Z
-original_updated_at: 2024-01-18T02:25:09Z
-migrated_at: 2026-09-09T20:54:56+08:00
+provenance:
+  original_created_at: 2024-01-18T02:18:43Z
+  original_updated_at: 2024-01-18T02:25:09Z
+  migrated_at: 2026-09-09T20:54:56+08:00
 last_verified: null
 status: rewritten-unverified
 sources:

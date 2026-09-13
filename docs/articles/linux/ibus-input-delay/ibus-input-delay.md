@@ -4,12 +4,19 @@ description: 重启 IBus，临时恢复 Ubuntu 上间歇性卡顿的键盘输入
 date:
   created: 2023-12-06T15:12:59+08:00
   updated: 2024-01-19T11:56:10+08:00
+created_at: 2023-12-06T15:12:59+08:00
+published_at: 2023-12-06T15:12:59+08:00
+updated_at: 2024-01-19T11:56:10+08:00
+update_history:
+  - at: 2024-01-19T11:56:10+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - Linux
 slug: ibus-input-delay
-original_created_at: 2023-12-06T07:12:59Z
-original_updated_at: 2024-01-19T03:56:10Z
-migrated_at: 2026-09-09T18:26:09+08:00
+provenance:
+  original_created_at: 2023-12-06T07:12:59Z
+  original_updated_at: 2024-01-19T03:56:10Z
+  migrated_at: 2026-09-09T18:26:09+08:00
 last_verified: 2024-01-19
 status: historical-tested
 sources:

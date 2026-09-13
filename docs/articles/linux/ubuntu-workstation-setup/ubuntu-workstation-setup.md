@@ -4,12 +4,19 @@ description: 2023 至 2024 年 Ubuntu 工作站配置记录的去重入口
 date:
   created: 2023-09-01T08:52:15+08:00
   updated: 2024-01-22T15:39:11+08:00
+created_at: 2023-09-01T08:52:15+08:00
+published_at: 2023-09-01T08:52:15+08:00
+updated_at: 2024-01-22T15:39:11+08:00
+update_history:
+  - at: 2024-01-22T15:39:11+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - Linux
 slug: ubuntu-workstation-setup
-original_created_at: 2023-09-01T00:52:15Z
-original_updated_at: 2024-01-22T07:39:11Z
-migrated_at: 2026-09-09T20:54:56+08:00
+provenance:
+  original_created_at: 2023-09-01T00:52:15Z
+  original_updated_at: 2024-01-22T07:39:11Z
+  migrated_at: 2026-09-09T20:54:56+08:00
 last_verified: 2024-01-03
 status: historical-notes
 sources:

@@ -22,15 +22,15 @@
     });
 
     const comparators = {
-      "created-desc": (a, b) => number(b, "postCreated") - number(a, "postCreated"),
+      "published-desc": (a, b) => number(b, "postPublished") - number(a, "postPublished"),
       "updated-desc": (a, b) => number(b, "postUpdated") - number(a, "postUpdated"),
-      "created-asc": (a, b) => number(a, "postCreated") - number(b, "postCreated"),
+      "published-asc": (a, b) => number(a, "postPublished") - number(b, "postPublished"),
       "updated-asc": (a, b) => number(a, "postUpdated") - number(b, "postUpdated"),
       "title-asc": (a, b) => collator.compare(title(a), title(b)),
       "title-desc": (a, b) => collator.compare(title(b), title(a))
     };
 
-    const selectedSort = () => sortControl.querySelector("input:checked")?.value || "created-desc";
+    const selectedSort = () => sortControl.querySelector("input:checked")?.value || "published-desc";
 
     const categoryCounts = new Map();
     posts.forEach(post => {
@@ -47,7 +47,7 @@
 
     const update = () => {
       const selectedCategory = categoryControl.value;
-      const comparator = comparators[selectedSort()] || comparators["created-desc"];
+      const comparator = comparators[selectedSort()] || comparators["published-desc"];
       let visible = 0;
 
       posts.sort(comparator);

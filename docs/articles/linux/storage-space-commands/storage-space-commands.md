@@ -4,12 +4,19 @@ description: 分别查看文件目录、文件系统和块设备，避免把三�
 date:
   created: 2024-01-03T17:20:26+08:00
   updated: 2024-01-06T20:33:39+08:00
+created_at: 2024-01-03T17:20:26+08:00
+published_at: 2024-01-03T17:20:26+08:00
+updated_at: 2024-01-06T20:33:39+08:00
+update_history:
+  - at: 2024-01-06T20:33:39+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - Linux
 slug: storage-space-commands
-original_created_at: 2024-01-03T09:20:26Z
-original_updated_at: 2024-01-06T12:33:39Z
-migrated_at: 2026-09-09T20:54:56+08:00
+provenance:
+  original_created_at: 2024-01-03T09:20:26Z
+  original_updated_at: 2024-01-06T12:33:39Z
+  migrated_at: 2026-09-09T20:54:56+08:00
 last_verified: 2024-01-06
 status: historical-notes
 sources:

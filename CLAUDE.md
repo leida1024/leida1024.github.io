@@ -19,3 +19,18 @@
 - 管理记录应保留历史事实、来源和审核结论，不把历史描述当作当前规则。
 - 新增长期规则时修改本文件；`AGENTS.md` 仅作为兼容入口。
 - 修改公开内容或站点配置后，运行 `python -m mkdocs build --strict`。
+
+## 文章时间与记录
+
+文章 frontmatter 使用以下时间字段，全部采用带时区的 ISO 8601 时间：
+
+- `created_at`：文章开始写作、形成初稿或创建记录的时间，不作为公开文章排序依据。
+- `published_at`：文章第一次对读者公开的时间；首页和时间线按此字段排序。
+- `updated_at`：发布后最近一次有意义的内容更新；没有实质更新时与 `published_at` 相同。
+- `update_history`：发布后的重要更新列表，每项包含 `at` 和面向读者的 `summary`。
+
+页面顶部只展示“发布于”和（日期不同时）“更新于”。文章正文末尾的折叠“文章记录”展示“写于”“首次发布于”和更新历史。错别字、排版调整、构建变化和迁移本身不进入更新历史。
+
+`provenance` 保存来源创建/更新时间、来源提交时间和本站迁移时间等审计信息；这些字段不进入普通读者的文章信息区域。由于 Material Blog 插件需要 `date.created` 和 `date.updated`，它们是由 `published_at` 和 `updated_at` 同步生成的构建适配字段，不单独维护语义。
+
+新增或修改文章时，先判断修改是否已经公开；`created_at` 记录首次开始写作或创建记录的时间，发布前的草稿修改不更新 `updated_at`，也不进入 `update_history`；发布后的实质修改同时更新 `updated_at` 和 `update_history`。具体字段迁移原则记录在 `management/content-metadata-policy.md`。

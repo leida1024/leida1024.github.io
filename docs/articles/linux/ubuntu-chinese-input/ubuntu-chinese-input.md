@@ -4,12 +4,19 @@ description: 在 Ubuntu 22.04 中添加 Intelligent Pinyin 并启用小鹤双拼
 date:
   created: 2024-01-17T15:18:57+08:00
   updated: 2024-01-17T15:24:22+08:00
+created_at: 2024-01-17T15:18:57+08:00
+published_at: 2024-01-17T15:18:57+08:00
+updated_at: 2024-01-17T15:24:22+08:00
+update_history:
+  - at: 2024-01-17T15:24:22+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - Linux
 slug: ubuntu-chinese-input
-original_created_at: 2024-01-17T07:18:57Z
-original_updated_at: 2024-01-17T07:24:22Z
-migrated_at: 2026-09-09T18:26:09+08:00
+provenance:
+  original_created_at: 2024-01-17T07:18:57Z
+  original_updated_at: 2024-01-17T07:24:22Z
+  migrated_at: 2026-09-09T18:26:09+08:00
 last_verified: 2024-01-17
 status: historical-tested
 sources:

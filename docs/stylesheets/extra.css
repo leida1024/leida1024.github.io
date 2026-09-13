@@ -103,6 +103,63 @@ html {
   font-variant-numeric: tabular-nums;
 }
 
+.article-history {
+  margin: 2rem 0 1.5rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color--light);
+  font-size: 0.78rem;
+}
+
+.article-history summary {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 0;
+  color: var(--md-default-fg-color);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.article-history summary svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentcolor;
+}
+
+.article-history__list {
+  margin: 0;
+  padding: 0 0 0.7rem 1.4rem;
+}
+
+.article-history__item {
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0, 1fr);
+  gap: 0.75rem;
+  padding: 0.25rem 0;
+}
+
+.article-history__item dt,
+.article-history__item dd {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.article-history__item dt {
+  color: var(--md-default-fg-color--light);
+}
+
+.article-history__item time {
+  font-variant-numeric: tabular-nums;
+}
+
+.article-history__summary {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--md-default-fg-color--light);
+}
+
 .md-typeset .article-meta {
   margin-top: -0.7rem;
   color: var(--md-default-fg-color--light);

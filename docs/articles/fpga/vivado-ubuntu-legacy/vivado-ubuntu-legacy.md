@@ -4,12 +4,19 @@ description: Vivado 和 Vitis 旧版本的批量安装、线缆驱动、环境�
 date:
   created: 2023-08-29T20:07:59+08:00
   updated: 2025-04-13T01:50:20+08:00
+created_at: 2023-08-29T20:07:59+08:00
+published_at: 2023-08-29T20:07:59+08:00
+updated_at: 2025-04-13T01:50:20+08:00
+update_history:
+  - at: 2025-04-13T01:50:20+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - FPGA
 slug: vivado-ubuntu-legacy
-original_created_at: 2023-08-29T12:07:59Z
-original_updated_at: 2025-04-12T17:50:20Z
-migrated_at: 2026-09-09T20:54:56+08:00
+provenance:
+  original_created_at: 2023-08-29T12:07:59Z
+  original_updated_at: 2025-04-12T17:50:20Z
+  migrated_at: 2026-09-09T20:54:56+08:00
 last_verified: 2023-09-16
 status: legacy-tested
 sources:

@@ -18,8 +18,8 @@
   <fieldset class="post-toolbar__group post-sort-options" data-post-sort>
     <legend>排序</legend>
     <div class="post-sort-options__choices" role="radiogroup" aria-label="文章排序方式">
-      <label><input type="radio" name="post-sort" value="created-desc" checked>创建时间：新到旧</label>
-      <label><input type="radio" name="post-sort" value="created-asc">创建时间：旧到新</label>
+      <label><input type="radio" name="post-sort" value="published-desc" checked>发布时间：新到旧</label>
+      <label><input type="radio" name="post-sort" value="published-asc">发布时间：旧到新</label>
       <label><input type="radio" name="post-sort" value="updated-desc">更新时间：新到旧</label>
       <label><input type="radio" name="post-sort" value="updated-asc">更新时间：旧到新</label>
       <label><input type="radio" name="post-sort" value="title-asc">标题：升序（A 到 Z）</label>

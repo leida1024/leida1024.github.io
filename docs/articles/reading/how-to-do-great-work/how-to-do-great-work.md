@@ -4,12 +4,19 @@ description: 旧站点在 2023 年保存的 Paul Graham 文章阅读入口
 date:
   created: 2023-07-21T23:15:44+08:00
   updated: 2023-07-21T23:17:47+08:00
+created_at: 2023-07-21T23:15:44+08:00
+published_at: 2023-07-21T23:15:44+08:00
+updated_at: 2023-07-21T23:17:47+08:00
+update_history:
+  - at: 2023-07-21T23:17:47+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - Reading
 slug: how-to-do-great-work
-original_created_at: 2023-07-21T15:15:44Z
-original_updated_at: 2023-07-21T15:17:47Z
-migrated_at: 2026-09-09T18:26:09+08:00
+provenance:
+  original_created_at: 2023-07-21T15:15:44Z
+  original_updated_at: 2023-07-21T15:17:47Z
+  migrated_at: 2026-09-09T18:26:09+08:00
 status: archived
 ---
 

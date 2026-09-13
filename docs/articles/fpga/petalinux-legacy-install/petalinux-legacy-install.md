@@ -4,12 +4,19 @@ description: PetaLinux 旧版本安装器参数与非 root 安装目录的历史
 date:
   created: 2023-09-01T16:16:35+08:00
   updated: 2023-09-02T20:09:07+08:00
+created_at: 2023-09-01T16:16:35+08:00
+published_at: 2023-09-01T16:16:35+08:00
+updated_at: 2023-09-02T20:09:07+08:00
+update_history:
+  - at: 2023-09-02T20:09:07+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - FPGA
 slug: petalinux-legacy-install
-original_created_at: 2023-09-01T08:16:35Z
-original_updated_at: 2023-09-02T12:09:07Z
-migrated_at: 2026-09-09T20:54:56+08:00
+provenance:
+  original_created_at: 2023-09-01T08:16:35Z
+  original_updated_at: 2023-09-02T12:09:07Z
+  migrated_at: 2026-09-09T20:54:56+08:00
 last_verified: null
 status: legacy-incomplete
 sources:

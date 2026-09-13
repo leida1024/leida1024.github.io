@@ -4,12 +4,17 @@ description: 区分归档与压缩，并整理创建、查看和解压常见格�
 date:
   created: 2024-01-30T13:45:26+08:00
   updated: 2024-01-30T13:45:26+08:00
+created_at: 2024-01-30T13:45:26+08:00
+published_at: 2024-01-30T13:45:26+08:00
+updated_at: 2024-01-30T13:45:26+08:00
+update_history: []
 categories:
   - Linux
 slug: archive-compression-commands
-original_created_at: 2024-01-30T13:45:26+08:00
-original_updated_at: 2024-01-30T13:45:26+08:00
-migrated_at: 2026-09-10T00:20:43+08:00
+provenance:
+  original_created_at: 2024-01-30T13:45:26+08:00
+  original_updated_at: 2024-01-30T13:45:26+08:00
+  migrated_at: 2026-09-10T00:20:43+08:00
 last_verified: null
 status: rewritten-unverified
 sources:

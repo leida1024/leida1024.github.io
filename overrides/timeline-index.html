@@ -29,8 +29,8 @@
               <ul>
                 {% for post in month.posts %}
                   <li>
-                    <time datetime="{{ post.config.date.created }}">
-                      {{- post.config.date.created.strftime("%m-%d") -}}
+                    <time datetime="{{ post.meta.published_at }}">
+                      {{- post.meta.published_at.strftime("%m-%d") -}}
                     </time>
                     <a href="{{ post.url | url }}">{{ post.title }}</a>
                   </li>

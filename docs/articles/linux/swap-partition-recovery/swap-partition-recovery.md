@@ -4,12 +4,19 @@ description: 从 lsblk 定位预留分区，启用 swap，并用 UUID 写入 fst
 date:
   created: 2023-09-07T13:55:06+08:00
   updated: 2024-01-03T17:17:14+08:00
+created_at: 2023-09-07T13:55:06+08:00
+published_at: 2023-09-07T13:55:06+08:00
+updated_at: 2024-01-03T17:17:14+08:00
+update_history:
+  - at: 2024-01-03T17:17:14+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - Linux
 slug: swap-partition-recovery
-original_created_at: 2023-09-07T05:55:06Z
-original_updated_at: 2024-01-03T09:17:14Z
-migrated_at: 2026-09-09T20:54:56+08:00
+provenance:
+  original_created_at: 2023-09-07T05:55:06Z
+  original_updated_at: 2024-01-03T09:17:14Z
+  migrated_at: 2026-09-09T20:54:56+08:00
 last_verified: 2023-09-08
 status: historical-tested
 sources:

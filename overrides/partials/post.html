@@ -1,7 +1,7 @@
 <article
   class="md-post md-post--excerpt"
-  data-post-created="{{ post.config.date.created }}"
-  data-post-updated="{{ post.config.date.updated or post.config.date.created }}"
+  data-post-published="{{ post.meta.published_at }}"
+  data-post-updated="{{ post.meta.updated_at or post.meta.published_at }}"
   data-post-title="{{ post.title }}"
   data-post-categories="{% for category in post.categories %}{{ category.title | e }}{% if loop.revindex > 1 %}|{% endif %}{% endfor %}"
 >
@@ -9,16 +9,16 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
-          创建
-          <time datetime="{{ post.config.date.created }}">
-            {{- post.config.date.created | date -}}
+          发布于
+          <time datetime="{{ post.meta.published_at }}">
+            {{- post.meta.published_at | date -}}
           </time>
         </li>
-        {% if post.config.date.updated %}
+        {% if post.meta.updated_at and post.meta.updated_at != post.meta.published_at %}
           <li class="md-meta__item">
-            更新
-            <time datetime="{{ post.config.date.updated }}">
-              {{- post.config.date.updated | date -}}
+            更新于
+            <time datetime="{{ post.meta.updated_at }}">
+              {{- post.meta.updated_at | date -}}
             </time>
           </li>
         {% endif %}

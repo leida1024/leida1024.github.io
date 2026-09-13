@@ -1,0 +1,33 @@
+{% if page and (page.meta.created_at or page.meta.published_at or page.meta.update_history) %}
+  <details class="article-history">
+    <summary>
+      {% include ".icons/material/history.svg" %}
+      文章记录
+    </summary>
+    <dl class="article-history__list">
+      {% if page.meta.created_at %}
+        <div class="article-history__item">
+          <dt>写于</dt>
+          <dd><time datetime="{{ page.meta.created_at }}">{{ page.meta.created_at | date }}</time></dd>
+        </div>
+      {% endif %}
+      {% if page.meta.published_at %}
+        <div class="article-history__item">
+          <dt>首次发布于</dt>
+          <dd><time datetime="{{ page.meta.published_at }}">{{ page.meta.published_at | date }}</time></dd>
+        </div>
+      {% endif %}
+      {% for revision in page.meta.update_history or [] %}
+        <div class="article-history__item">
+          <dt>更新于</dt>
+          <dd>
+            <time datetime="{{ revision.at }}">{{ revision.at | date }}</time>
+            {% if revision.summary %}
+              <span class="article-history__summary">{{ revision.summary }}</span>
+            {% endif %}
+          </dd>
+        </div>
+      {% endfor %}
+    </dl>
+  </details>
+{% endif %}

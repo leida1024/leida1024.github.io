@@ -4,12 +4,19 @@ description: 从旧换源记录提炼的发行版代号、备份与验证原则
 date:
   created: 2024-01-17T13:43:58+08:00
   updated: 2024-01-17T15:16:24+08:00
+created_at: 2024-01-17T13:43:58+08:00
+published_at: 2024-01-17T13:43:58+08:00
+updated_at: 2024-01-17T15:16:24+08:00
+update_history:
+  - at: 2024-01-17T15:16:24+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - Linux
 slug: ubuntu-software-sources
-original_created_at: 2024-01-17T05:43:58Z
-original_updated_at: 2024-01-17T07:16:24Z
-migrated_at: 2026-09-09T20:54:56+08:00
+provenance:
+  original_created_at: 2024-01-17T05:43:58Z
+  original_updated_at: 2024-01-17T07:16:24Z
+  migrated_at: 2026-09-09T20:54:56+08:00
 last_verified: null
 status: rewritten-unverified
 sources:

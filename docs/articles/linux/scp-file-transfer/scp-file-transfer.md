@@ -4,12 +4,17 @@ description: 整理 scp 上传、下载、目录复制、端口与密钥选项�
 date:
   created: 2024-02-01T23:50:58+08:00
   updated: 2024-02-01T23:50:58+08:00
+created_at: 2024-02-01T23:50:58+08:00
+published_at: 2024-02-01T23:50:58+08:00
+updated_at: 2024-02-01T23:50:58+08:00
+update_history: []
 categories:
   - Linux
 slug: scp-file-transfer
-original_created_at: 2024-02-01T23:50:58+08:00
-original_updated_at: 2024-02-01T23:50:58+08:00
-migrated_at: 2026-09-10T00:20:43+08:00
+provenance:
+  original_created_at: 2024-02-01T23:50:58+08:00
+  original_updated_at: 2024-02-01T23:50:58+08:00
+  migrated_at: 2026-09-10T00:20:43+08:00
 last_verified: null
 status: rewritten-unverified
 sources:

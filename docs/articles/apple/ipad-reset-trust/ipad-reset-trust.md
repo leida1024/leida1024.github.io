@@ -4,12 +4,19 @@ description: 误选不信任后，通过还原位置与隐私重新触发有线�
 date:
   created: 2023-08-19T19:57:59+08:00
   updated: 2023-09-01T09:52:58+08:00
+created_at: 2023-08-19T19:57:59+08:00
+published_at: 2023-08-19T19:57:59+08:00
+updated_at: 2023-09-01T09:52:58+08:00
+update_history:
+  - at: 2023-09-01T09:52:58+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - Apple
 slug: ipad-reset-trust
-original_created_at: 2023-08-19T11:57:59Z
-original_updated_at: 2023-09-01T01:52:58Z
-migrated_at: 2026-09-09T20:54:56+08:00
+provenance:
+  original_created_at: 2023-08-19T11:57:59Z
+  original_updated_at: 2023-09-01T01:52:58Z
+  migrated_at: 2026-09-09T20:54:56+08:00
 last_verified: 2023-08-19
 status: historical-partial
 sources:

@@ -4,12 +4,19 @@ description: 一组 Clash 风格的 Spotify 域名后缀规则及其适用边界
 date:
   created: 2024-07-08T19:13:33+08:00
   updated: 2024-07-08T19:13:34+08:00
+created_at: 2024-07-08T19:13:33+08:00
+published_at: 2024-07-08T19:13:33+08:00
+updated_at: 2024-07-08T19:13:34+08:00
+update_history:
+  - at: 2024-07-08T19:13:34+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - Network
 slug: spotify-proxy-rules
-original_created_at: 2024-07-08T11:13:33Z
-original_updated_at: 2024-07-08T11:13:34Z
-migrated_at: 2026-09-09T20:54:56+08:00
+provenance:
+  original_created_at: 2024-07-08T11:13:33Z
+  original_updated_at: 2024-07-08T11:13:34Z
+  migrated_at: 2026-09-09T20:54:56+08:00
 last_verified: null
 status: historical-snippet
 sources:

@@ -4,12 +4,19 @@ description: Windows 11 使用反色鼠标指针时，OBS 捕获预览不显示�
 date:
   created: 2023-08-15T23:42:30+08:00
   updated: 2023-09-01T09:51:28+08:00
+created_at: 2023-08-15T23:42:30+08:00
+published_at: 2023-08-15T23:42:30+08:00
+updated_at: 2023-09-01T09:51:28+08:00
+update_history:
+  - at: 2023-09-01T09:51:28+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - Windows
 slug: obs-inverted-cursor
-original_created_at: 2023-08-15T15:42:30Z
-original_updated_at: 2023-09-01T01:51:28Z
-migrated_at: 2026-09-09T20:54:56+08:00
+provenance:
+  original_created_at: 2023-08-15T15:42:30Z
+  original_updated_at: 2023-09-01T01:51:28Z
+  migrated_at: 2026-09-09T20:54:56+08:00
 last_verified: 2023-08-15
 status: historical-tested
 sources:

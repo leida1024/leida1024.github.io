@@ -4,12 +4,19 @@ description: 从虚拟机网络连通开始，安全地启用 OpenSSH、限制�
 date:
   created: 2024-01-30T13:45:26+08:00
   updated: 2024-01-30T16:35:01+08:00
+created_at: 2024-01-30T13:45:26+08:00
+published_at: 2024-01-30T13:45:26+08:00
+updated_at: 2024-01-30T16:35:01+08:00
+update_history:
+  - at: 2024-01-30T16:35:01+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - Linux
 slug: ubuntu-server-lan-ssh-proxy
-original_created_at: 2024-01-30T13:45:26+08:00
-original_updated_at: 2024-01-30T16:35:01+08:00
-migrated_at: 2026-09-10T00:20:43+08:00
+provenance:
+  original_created_at: 2024-01-30T13:45:26+08:00
+  original_updated_at: 2024-01-30T16:35:01+08:00
+  migrated_at: 2026-09-10T00:20:43+08:00
 last_verified: null
 status: rewritten-unverified
 sources:

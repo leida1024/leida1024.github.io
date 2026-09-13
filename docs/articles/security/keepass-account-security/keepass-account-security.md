@@ -4,12 +4,17 @@ description: 从浏览器保存密码迁移到 KeePass 的个人安全记录与�
 date:
   created: 2024-10-07T21:03:26+08:00
   updated: 2024-10-07T21:03:26+08:00
+created_at: 2024-10-07T21:03:26+08:00
+published_at: 2024-10-07T21:03:26+08:00
+updated_at: 2024-10-07T21:03:26+08:00
+update_history: []
 categories:
   - Security
 slug: keepass-account-security
-original_created_at: 2024-10-07T13:03:26Z
-original_updated_at: 2024-10-07T13:03:26Z
-migrated_at: 2026-09-09T20:54:56+08:00
+provenance:
+  original_created_at: 2024-10-07T13:03:26Z
+  original_updated_at: 2024-10-07T13:03:26Z
+  migrated_at: 2026-09-09T20:54:56+08:00
 last_verified: 2024-10-07
 status: experience-note
 sources:

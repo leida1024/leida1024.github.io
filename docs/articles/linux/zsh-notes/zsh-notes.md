@@ -4,12 +4,19 @@ description: 从旧安装记录中保留 Zsh 切换、插件目录和安全注�
 date:
   created: 2024-01-18T10:41:42+08:00
   updated: 2024-01-18T11:03:33+08:00
+created_at: 2024-01-18T10:41:42+08:00
+published_at: 2024-01-18T10:41:42+08:00
+updated_at: 2024-01-18T11:03:33+08:00
+update_history:
+  - at: 2024-01-18T11:03:33+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - Linux
 slug: zsh-notes
-original_created_at: 2024-01-18T02:41:42Z
-original_updated_at: 2024-01-18T03:03:33Z
-migrated_at: 2026-09-09T20:54:56+08:00
+provenance:
+  original_created_at: 2024-01-18T02:41:42Z
+  original_updated_at: 2024-01-18T03:03:33Z
+  migrated_at: 2026-09-09T20:54:56+08:00
 last_verified: null
 status: rewritten-unverified
 sources:

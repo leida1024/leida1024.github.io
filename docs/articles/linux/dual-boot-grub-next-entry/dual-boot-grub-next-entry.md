@@ -4,12 +4,19 @@ description: Ubuntu 与 Windows 双硬盘环境中，用 GRUB 只切换下一次
 date:
   created: 2023-08-25T14:50:21+08:00
   updated: 2024-01-19T19:46:44+08:00
+created_at: 2023-08-25T14:50:21+08:00
+published_at: 2023-08-25T14:50:21+08:00
+updated_at: 2024-01-19T19:46:44+08:00
+update_history:
+  - at: 2024-01-19T19:46:44+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - Linux
 slug: dual-boot-grub-next-entry
-original_created_at: 2023-08-25T06:50:21Z
-original_updated_at: 2024-01-19T11:46:44Z
-migrated_at: 2026-09-09T20:54:56+08:00
+provenance:
+  original_created_at: 2023-08-25T06:50:21Z
+  original_updated_at: 2024-01-19T11:46:44Z
+  migrated_at: 2026-09-09T20:54:56+08:00
 last_verified: 2023-08-25
 status: historical-tested
 sources:

@@ -4,12 +4,19 @@ description: NVIDIA 驱动安装伴随内核升级后，通过补齐 linux-modul
 date:
   created: 2023-08-26T20:00:30+08:00
   updated: 2023-08-31T16:42:53+08:00
+created_at: 2023-08-26T20:00:30+08:00
+published_at: 2023-08-26T20:00:30+08:00
+updated_at: 2023-08-31T16:42:53+08:00
+update_history:
+  - at: 2023-08-31T16:42:53+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - Linux
 slug: kernel-modules-extra-network-recovery
-original_created_at: 2023-08-26T12:00:30Z
-original_updated_at: 2023-08-31T08:42:53Z
-migrated_at: 2026-09-09T20:54:56+08:00
+provenance:
+  original_created_at: 2023-08-26T12:00:30Z
+  original_updated_at: 2023-08-31T08:42:53Z
+  migrated_at: 2026-09-09T20:54:56+08:00
 last_verified: 2023-08-26
 status: historical-tested
 sources:

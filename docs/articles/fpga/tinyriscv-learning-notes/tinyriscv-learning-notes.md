@@ -4,12 +4,19 @@ description: TinyRISC-V 源码阅读问题、总线观察和板级调试资料�
 date:
   created: 2023-09-26T15:48:45+08:00
   updated: 2023-11-07T14:43:54+08:00
+created_at: 2023-09-26T15:48:45+08:00
+published_at: 2023-09-26T15:48:45+08:00
+updated_at: 2023-11-07T14:43:54+08:00
+update_history:
+  - at: 2023-11-07T14:43:54+08:00
+    summary: 来源记录的最后更新时间
 categories:
   - FPGA
 slug: tinyriscv-learning-notes
-original_created_at: 2023-09-26T07:48:45Z
-original_updated_at: 2023-11-07T06:43:54Z
-migrated_at: 2026-09-09T20:54:56+08:00
+provenance:
+  original_created_at: 2023-09-26T07:48:45Z
+  original_updated_at: 2023-11-07T06:43:54Z
+  migrated_at: 2026-09-09T20:54:56+08:00
 last_verified: null
 status: study-notes
 sources:

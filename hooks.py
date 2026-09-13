@@ -65,13 +65,13 @@ def on_page_context(context, *, page, config, nav):
     years = {}
     posts = sorted(
         posts_by_url.values(),
-        key=lambda post: post.config.date.created,
+        key=lambda post: post.meta["published_at"],
         reverse=True,
     )
     for post in posts:
-        created = post.config.date.created
-        months = years.setdefault(created.year, {})
-        months.setdefault(created.month, []).append(post)
+        published = post.meta["published_at"]
+        months = years.setdefault(published.year, {})
+        months.setdefault(published.month, []).append(post)
 
     context["timeline_years"] = [
         {
