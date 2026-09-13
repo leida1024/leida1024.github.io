@@ -1,0 +1,55 @@
+<section class="article-info" aria-labelledby="article-info-title">
+  <h2 class="md-nav__title" id="article-info-title">
+    <span class="md-nav__icon md-icon"></span>
+    文章信息
+  </h2>
+  <dl class="article-info__list">
+    <div class="article-info__item">
+      <dt>
+        {% include ".icons/material/calendar.svg" %}
+        创建
+      </dt>
+      <dd>
+        <time datetime="{{ page.config.date.created }}">{{ page.config.date.created | date }}</time>
+      </dd>
+    </div>
+    {% if page.config.date.updated %}
+      <div class="article-info__item">
+        <dt>
+          {% include ".icons/material/calendar-clock.svg" %}
+          更新
+        </dt>
+        <dd>
+          <time datetime="{{ page.config.date.updated }}">{{ page.config.date.updated | date }}</time>
+        </dd>
+      </div>
+    {% endif %}
+    {% if page.meta.migrated_at %}
+      <div class="article-info__item">
+        <dt>
+          {% include ".icons/material/transfer.svg" %}
+          迁移
+        </dt>
+        <dd>
+          <time datetime="{{ page.meta.migrated_at }}">{{ page.meta.migrated_at | date }}</time>
+        </dd>
+      </div>
+    {% endif %}
+    {% if page.config.readtime %}
+      {% set time = page.config.readtime %}
+      <div class="article-info__item">
+        <dt>
+          {% include ".icons/material/clock-outline.svg" %}
+          阅读
+        </dt>
+        <dd>
+          {% if time == 1 %}
+            {{ lang.t("readtime.one") }}
+          {% else %}
+            {{ lang.t("readtime.other") | replace("#", time) }}
+          {% endif %}
+        </dd>
+      </div>
+    {% endif %}
+  </dl>
+</section>

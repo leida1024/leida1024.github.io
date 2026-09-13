@@ -58,7 +58,7 @@ plugins:
       blog_dir: .
       post_dir: articles
       post_url_format: "{categories}/{slug}"
-      post_date_format: "yyyy-MM-dd HH:mm:ss XXX"
+      post_date_format: "yyyy-MM-dd HH:mm:ss"
       post_excerpt: required
       archive_name: 时间线
       archive_url_format: "timeline/{date}"

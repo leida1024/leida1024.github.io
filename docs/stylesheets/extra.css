@@ -55,6 +55,54 @@ html {
   white-space: nowrap;
 }
 
+.article-info {
+  margin-top: 1.2rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.article-info .md-nav__title {
+  margin-bottom: 0.35rem;
+}
+
+.article-info__list {
+  margin: 0;
+  padding: 0 0.6rem;
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+
+.article-info__item {
+  display: grid;
+  grid-template-columns: 3.2rem minmax(0, 1fr);
+  gap: 0.4rem;
+  padding: 0.25rem 0;
+}
+
+.article-info__item dt,
+.article-info__item dd {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.article-info__item dt {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.25rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.article-info__item svg {
+  flex: 0 0 auto;
+  width: 0.8rem;
+  height: 0.8rem;
+  fill: currentcolor;
+}
+
+.article-info__item time {
+  font-variant-numeric: tabular-nums;
+}
+
 .md-typeset .article-meta {
   margin-top: -0.7rem;
   color: var(--md-default-fg-color--light);
